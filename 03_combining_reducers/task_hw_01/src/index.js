@@ -4,6 +4,7 @@ import { setLanguage } from './language.actions';
 import { addProduct, removeProduct } from './cart.actions';
 import { setUser, removeUser } from './users.actions';
 
+console.log(store.getState());
 store.subscribe(() => console.log(store.getState()));
 
 store.dispatch(setLanguage('fra'));
