@@ -1,20 +1,20 @@
 import { SET_USER, REMOVE_USER } from './users.actions';
 
 const initialState = {
-  userData: {},
+  user: null,
 };
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_USER: {
       return {
         ...state,
-        userData: action.payload.userData,
+        user: action.payload.userData,
       };
     }
     case REMOVE_USER: {
       return {
         ...state,
-        userData: {},
+        user: {},
       };
     }
 
