@@ -5,11 +5,7 @@ class Pagination extends Component {
     const { goPrev, goNext, currentPage, totalItems, itemsPerPage } =
       this.props;
     const isPrevPageAvailable = currentPage !== 0;
-    let isNextPageAvailable =
-      currentPage !== Math.ceil(totalItems / itemsPerPage) - 1;
-    if (totalItems === 0) {
-      isNextPageAvailable = false;
-    }
+    let isNextPageAvailable = currentPage < totalItems / itemsPerPage - 1;
     console.log(isPrevPageAvailable, isNextPageAvailable);
     return (
       <div className="pagination">
