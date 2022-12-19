@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class User extends Component {
   render() {
-    const { name, age, id } = this.props;
+    const { name, age } = this.props;
     return (
       <li className="user">
         <span className="user__name">{name}</span>

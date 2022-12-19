@@ -6,7 +6,6 @@ import Pagination from './Pagination';
 
 class UsersList extends Component {
   render() {
-    console.log(this.props.currentPage);
     const { users } = this.props;
     return (
       <div>
