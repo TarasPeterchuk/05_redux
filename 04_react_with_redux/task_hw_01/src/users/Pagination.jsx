@@ -10,6 +10,7 @@ class Pagination extends Component {
     if (totalItems === 0) {
       isNextPageAvailable = false;
     }
+    console.log(isPrevPageAvailable, isNextPageAvailable);
     return (
       <div className="pagination">
         <button
