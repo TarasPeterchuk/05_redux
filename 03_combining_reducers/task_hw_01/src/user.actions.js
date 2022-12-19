@@ -1,5 +1,5 @@
-export const SET_USER = 'USERS/ADD_USER';
-export const REMOVE_USER = 'USERS/REMOVE_USER';
+export const SET_USER = 'USER/ADD_USER';
+export const REMOVE_USER = 'USER/REMOVE_USER';
 
 export const setUser = (userData) => {
   return {
