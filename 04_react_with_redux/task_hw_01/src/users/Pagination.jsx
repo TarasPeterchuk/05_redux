@@ -12,7 +12,7 @@ class Pagination extends Component {
         <button
           className="btn"
           onClick={goPrev}
-          disabled={!isPrevPageAvailable}
+          // disabled={!isPrevPageAvailable}
         >
           {isPrevPageAvailable && `←`}
         </button>
