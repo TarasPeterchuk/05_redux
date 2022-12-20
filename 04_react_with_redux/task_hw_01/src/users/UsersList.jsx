@@ -16,7 +16,7 @@ class UsersList extends Component {
           totalItems={users.length}
           itemsPerPage={3}
         />
-        <ul className="users" onClick={this.props.fillUsers}>
+        <ul className="users">
           {users
             .filter(
               (user, index) =>
