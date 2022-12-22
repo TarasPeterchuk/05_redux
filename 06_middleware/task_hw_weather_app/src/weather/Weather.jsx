@@ -1,0 +1,35 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { weatherDataSelector } from './weather.selectors';
+
+const Weather = ({ weatherData }) => {
+  return (
+    <main className="weather">
+      <h1 className="weather__title">Weather data</h1>
+      <ul className="cities-list">
+        {weatherData.map((city) => (
+          <li key={city.id} className="city">
+            <span className="city__name">{city.name}</span>
+            <span className="city__temperature">{city.temperature}</span>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
+};
+
+Weather.propTypes = {
+  weatherData: PropTypes.arrayOf(PropTypes.shape()),
+};
+Weather.defaultValue = {
+  weatherData: [],
+};
+
+const mapState = (state) => {
+  return {
+    weatherData: weatherDataSelector(state),
+  };
+};
+
+export default connect(mapState)(Weather);
