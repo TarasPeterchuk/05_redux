@@ -1,5 +1,5 @@
 export const WEATHER_DATA_RECEIVED = 'WEATHER_DATA_RECEIVED';
-import { getWeatherData } from './weather.gateway';
+import { fetchWeatherData } from './weather.gateway';
 
 export const weatherDataReceived = (weatherData) => {
   return {
@@ -8,9 +8,9 @@ export const weatherDataReceived = (weatherData) => {
   };
 };
 
-export const fetchWeatherData = () => {
+export const getWeatherData = () => {
   return function (dispatch) {
-    getWeatherData().then((weatherData) => {
+    fetchWeatherData().then((weatherData) => {
       dispatch(weatherDataReceived(weatherData));
     });
   };
