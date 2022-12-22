@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { weatherDataSelector } from './weather.selectors';
@@ -6,7 +6,10 @@ import * as weatherActions from './weather.actions';
 
 const Weather = ({ weatherData, getWeatherData }) => {
   // getWeatherData();
-  // console.log(weatherData);
+  console.log(weatherData);
+  useEffect(() => {
+    getWeatherData();
+  }, []);
 
   return (
     <main className="weather">
