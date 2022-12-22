@@ -4,7 +4,7 @@ import store from './store';
 import Weather from './weather/Weather';
 import { fetchWeatherData } from './weather/weather.actions';
 
-store.dispatch(fetchWeatherData());
+// store.dispatch(fetchWeatherData());
 
 const App = () => {
   return (

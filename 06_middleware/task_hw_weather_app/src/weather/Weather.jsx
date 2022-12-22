@@ -2,8 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { weatherDataSelector } from './weather.selectors';
+import * as weatherActions from './weather.actions';
 
-const Weather = ({ weatherData }) => {
+const Weather = ({ weatherData, fetchWeatherData }) => {
+  fetchWeatherData();
+  // console.log(fetchWeatherData);
+
   return (
     <main className="weather">
       <h1 className="weather__title">Weather data</h1>
@@ -31,5 +35,8 @@ const mapState = (state) => {
     weatherData: weatherDataSelector(state),
   };
 };
+const mapDispatch = {
+  fetchWeatherData: weatherActions.fetchWeatherData,
+};
 
-export default connect(mapState)(Weather);
+export default connect(mapState, mapDispatch)(Weather);
