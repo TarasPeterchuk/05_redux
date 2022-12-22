@@ -5,8 +5,8 @@ import { weatherDataSelector } from './weather.selectors';
 import * as weatherActions from './weather.actions';
 
 const Weather = ({ weatherData, getWeatherData }) => {
-  getWeatherData();
-  console.log(fetchWeatherData);
+  // getWeatherData();
+  // console.log(weatherData);
 
   return (
     <main className="weather">

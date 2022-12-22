@@ -2,9 +2,9 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import store from './store';
 import Weather from './weather/Weather';
-import { fetchWeatherData } from './weather/weather.actions';
+import { getWeatherData } from './weather/weather.actions';
 
-// store.dispatch(fetchWeatherData());
+store.dispatch(getWeatherData());
 
 const App = () => {
   return (
