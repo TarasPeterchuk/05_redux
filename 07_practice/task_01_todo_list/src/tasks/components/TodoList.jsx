@@ -9,7 +9,6 @@ import * as tasksAction from '../tasks.actions';
 class Todolist extends Component {
   componentDidMount() {
     this.props.getTaskList();
-    // this.fetchTasksList();
   }
 
   render() {

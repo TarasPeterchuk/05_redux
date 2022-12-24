@@ -46,8 +46,7 @@ body {
 
   &_done {
     opacity: 0.7;
-
-    .list-item__text {
+    list .list-item__text {
       text-decoration: line-through;
     }
   }
